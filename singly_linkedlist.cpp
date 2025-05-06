@@ -14,6 +14,15 @@ class linkedList
   node *START;
 
   public:
+    linkedList()
+    {
+      START = NULL;
+    }
+
+    void addNode()
+    {
+      
+    }
 };
 
 int main()
