@@ -127,6 +127,27 @@ int main()
   cout << endl
        << "Masukkan pilihan (1-5) : ";
   cin >> ch;
-
+  switch (ch)
+  {
+    case '1' :
+    {
+      mhs.addNode();
+    }
+    break;
+    case '2' :
+    {
+      if (mhs.listEmpty())
+      {
+        cout << endl << "list Kosong" << endl;
+        break;
+      }
+      cout << endl << "\nMasukkna no Mahasiswa yang akan dihapus : ";
+      cin >> nim;
+      if (mhs.delNode(nim) == false)
+      {
+        
+      }
+    }
+  }
  }
 }
