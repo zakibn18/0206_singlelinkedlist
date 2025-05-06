@@ -111,5 +111,5 @@ class linkedList
 
 int main()
 {
-  
+ linkedList mhs; 
 }
