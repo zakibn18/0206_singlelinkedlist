@@ -11,6 +11,12 @@ struct node
 // set value START = NULL
 node *start = NULL;
 
+// membuat prosedur addNode()
+void addNode()
+{
+  
+}
+
 int main()
 {
   
