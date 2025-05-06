@@ -60,7 +60,7 @@ class linkedList
     {
       return (START == NULL);
     }
-    bool Shearch(int nim, node **previos, node **current)
+    bool Search(int nim, node **previos, node **current)
     {
       *previos = START;
       *current = START;
@@ -77,7 +77,7 @@ class linkedList
     bool delNode(int nim)
     {
       node *current, *previous;
-      if (!Shearch(nim, &previous, & current))
+      if (!Search(nim, &previous, & current))
         return false;
 
       if (current == START)
@@ -129,12 +129,12 @@ int main()
   cin >> ch;
   switch (ch)
   {
-    case '1' :
+    case '1':
     {
       mhs.addNode();
     }
     break;
-    case '2' :
+    case '2':
     {
       if (mhs.listEmpty())
       {
@@ -144,10 +144,46 @@ int main()
       cout << endl << "\nMasukkna no Mahasiswa yang akan dihapus : ";
       cin >> nim;
       if (mhs.delNode(nim) == false)
+        cout << endl << "Data tidak ditemukan" << endl;
+      else
+        cout << endl << "Data dengan nomor Mahasiswa" << nim << "berhasil dihapus " << endl;
+    }
+    break;
+    case '3': 
+    {
+      mhs.traverse();
+    }
+    break;
+    case '4':
+    {
+      if (mhs.listEmpty() == true)
       {
-        
+        cout << "\nList Kosong\n";
+        break;
+      }
+      node *previous, *current;
+      cout << endl << "Masukkan no Mahasiswa yang dicari : ";
+      cin >> nim;
+      if (mhs.Search(nim, &previous ,&current) == false)
+        cout << endl << "Data tidak ditemukan" << endl;
+      else
+      {
+        cout << endl << "Data ditemukan" << endl;
+        cout << "\nNo Mahasiswa : " << current->noMhs << endl;
+        cout << "\n";
       }
     }
+    break;
+    case '5':
+    {
+      exit(0);
+    }
+    break;
+    default:
+    {
+      cout << "Pilihan Salah !." << endl;
+    }
+    break;
   }
  }
 }
