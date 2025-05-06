@@ -35,7 +35,14 @@ class linkedList
           cout << "\nDuplikasi noMhs tidak dijalankan\n";
           return;
         }
+        nodeBaru->next = START;
+        START = nodeBaru;
+        return;
       }
+
+      node *previous = START;
+      node *current = START;
+      
     }
 };
 
