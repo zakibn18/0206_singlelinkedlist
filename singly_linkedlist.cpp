@@ -42,7 +42,14 @@ class linkedList
 
       node *previous = START;
       node *current = START;
-      
+
+      while ((current != NULL) && (nim >= current->noMhs))
+      {
+        if (nim == current->noMhs)
+        cout << "\nDuplikasi noMhs tidak dijalankan\n";
+        return;
+      }
+
     }
 };
 
