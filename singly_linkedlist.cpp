@@ -111,5 +111,7 @@ class linkedList
 
 int main()
 {
- linkedList mhs; 
+ linkedList mhs;
+ int nim;
+ char ch; 
 }
