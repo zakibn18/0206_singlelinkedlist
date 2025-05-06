@@ -45,11 +45,20 @@ class linkedList
 
       while ((current != NULL) && (nim >= current->noMhs))
       {
-        if (nim == current->noMhs)
+        if (nim == current->noMhs){
         cout << "\nDuplikasi noMhs tidak dijalankan\n";
         return;
+        }
+        previous = current;
+        current = current->next;
       }
+      nodeBaru->next = current;
+      previous->next = nodeBaru;
+    }
 
+    bool listEmpty()
+    {
+      return (START == NULL);
     }
 };
 
