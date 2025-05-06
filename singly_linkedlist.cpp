@@ -11,7 +11,9 @@ class node
 
 class linkedList
 {
-  
+  node *START;
+
+  public:
 };
 
 int main()
